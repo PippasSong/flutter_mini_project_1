@@ -3,13 +3,15 @@ import 'package:flutter_mini_project_1/screens/list_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("로그인")),
+      appBar: AppBar(title: const Text("로그인")),
       body: Center(
           child: Container(
-              padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+              padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
               width: MediaQuery.of(context).size.width * 0.85,
               child: ElevatedButton(
                 onPressed: (() {
@@ -18,7 +20,7 @@ class LoginScreen extends StatelessWidget {
                             builder: (context) => ListScreen()))
                       });
                 }),
-                child: Text("로그인"),
+                child: const Text("로그인"),
               ))),
     );
   }
