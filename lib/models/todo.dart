@@ -11,7 +11,7 @@ class Todo {
 
   Todo.fromMap(Map<dynamic, dynamic>? map) {
     id = map?['id'];
-    title = map?['title'];
-    description = map?['descriptoin'];
+    title = map?["title"];
+    description = map?['description'];
   }
 }

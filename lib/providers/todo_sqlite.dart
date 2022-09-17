@@ -14,9 +14,10 @@ CREATE TABLE IF NOT EXISTS MyTodo
 
   Future<List<Todo>> getTodos() async {
     List<Todo> todos = [];
+
     List<Map> maps =
         await db.query("MyTodo", columns: ["id", "title", "description"]);
-
+    print(maps);
     for (Map map in maps) {
       todos.add(Todo.fromMap(map));
     }
@@ -33,6 +34,7 @@ CREATE TABLE IF NOT EXISTS MyTodo
     if (map.isNotEmpty) {
       return Todo.fromMap(map[0]);
     }
+    return null;
   }
 
   Future addTodo(Todo todo) async {

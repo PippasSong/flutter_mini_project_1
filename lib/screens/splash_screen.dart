@@ -5,6 +5,8 @@ import "dart:async";
 import "package:shared_preferences/shared_preferences.dart";
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -37,10 +39,10 @@ class _SplashScreenState extends State<SplashScreen> {
     await checkLogin().then((isLogin) {
       if (isLogin) {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => ListScreen()));
+            MaterialPageRoute(builder: (context) => const ListScreen()));
       } else {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => LoginScreen()));
+            MaterialPageRoute(builder: (context) => const LoginScreen()));
       }
     });
   }
