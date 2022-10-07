@@ -11,7 +11,7 @@ class ListScreen extends StatefulWidget {
 }
 
 class _ListScreenState extends State<ListScreen> {
-  late List<Todo> todos;
+  late List<Todo> todos; //late: non-nullable 변수의 초기화를 나중에 할 수 있다.
   TodoSqlite todoSqlite = TodoSqlite();
   bool isLoading = true;
 
